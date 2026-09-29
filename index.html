@@ -3,36 +3,96 @@
 
 <head>
     <meta charset="UTF-8">
-    <script>
-    (function () {
-        try {
-            var saved = localStorage.getItem("theme");
-            var system = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-            var theme = saved || system;
-            document.documentElement.setAttribute("data-theme", theme);
-        } catch (e) {
-            document.documentElement.setAttribute("data-theme", "dark");
-        }
-    })();
-</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Mathew Codes - Web Systems Developer building responsive websites and web applications.">
-    <meta name="theme-color" content="#0a0e14">
+    <!-- Prevent theme flash — must run before CSS -->
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem("theme");
+                var system = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+                var theme = saved || system;
+                document.documentElement.setAttribute("data-theme", theme);
+            } catch (e) {
+                document.documentElement.setAttribute("data-theme", "dark");
+            }
+        })();
+    </script>
 
+    <!-- ===== Primary SEO ===== -->
+    <title>Mathew Codes | Web Systems Developer Portfolio</title>
+    <meta name="description" content="Mathew Codes is a Web Systems Developer building responsive websites and web applications. Explore projects, skills, and get in touch.">
+    <meta name="author" content="Mathew Codes">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <!-- Canonical URL — tells Google the one true address of this page -->
+    <link rel="canonical" href="https://mathew-mats.github.io/portfolio/">
+
+    <!-- ===== Theme ===== -->
+    <meta name="theme-color" content="#0a0e14" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f7f9fc" media="(prefers-color-scheme: light)">
+
+    <!-- ===== Open Graph (Facebook, LinkedIn, WhatsApp) ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mathew Codes">
     <meta property="og:title" content="Mathew Codes | Web Systems Developer">
     <meta property="og:description" content="I build responsive websites and web applications that bring ideas to life.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/preview.jpg">
+    <meta property="og:url" content="https://mathew-mats.github.io/portfolio/">
+    <meta property="og:image" content="https://mathew-mats.github.io/portfolio/images/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Mathew Codes — Web Systems Developer portfolio preview">
+    <meta property="og:locale" content="en_US">
 
-    <title>Mathew Codes | Developer Portfolio</title>
+    <!-- ===== Twitter / X ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mathew Codes | Web Systems Developer">
+    <meta name="twitter:description" content="I build responsive websites and web applications that bring ideas to life.">
+    <meta name="twitter:image" content="https://mathew-mats.github.io/portfolio/images/preview.jpg">
+    
+    <meta name="twitter:creator" content="@mathewcodesit">
+    <meta name="twitter:site" content="@mathewcodesit"> 
+    
 
-  <link rel="icon" type="image/png" sizes="any" href="images/logo.png">
+    <!-- ===== Favicons ===== -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192.png">
 
+    <!-- ===== Fonts ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
+    <!-- ===== Structured Data — the "entity" signal for Google ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mathew Codes",
+        "alternateName": "Mathew",
+        "url": "https://mathew-mats.github.io/portfolio/",
+        "image": "https://mathew-mats.github.io/portfolio/images/mathew.jpg",
+        "jobTitle": "Web Systems Developer",
+        "description": "Web Systems Developer building responsive websites and web applications.",
+        "knowsAbout": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "PHP",
+            "Python",
+            "Django",
+            "MySQL",
+            "PostgreSQL"
+        ],
+        "sameAs": [
+            "https://github.com/mathew-mats"
+        ]
+    }
+    </script>
+
+    <!-- ===== Styles ===== -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -130,7 +190,7 @@
         </div>
 
         <div class="hero-image reveal">
-            <img src="images/mathew.jpg" alt="Portrait of Mathew" decoding="async">
+            <img src="images/mathew.jpg" alt="Portrait of Mathewcodes, Web Systems Developer" decoding="async">
         </div>
 
     </section>

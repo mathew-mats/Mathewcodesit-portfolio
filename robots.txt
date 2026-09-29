@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mathew-mats.github.io/portfolio/sitemap.xml
