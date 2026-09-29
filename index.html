@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+    (function () {
+        try {
+            var saved = localStorage.getItem("theme");
+            var system = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+            var theme = saved || system;
+            document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        }
+    })();
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Mathew Codes - Web Systems Developer building responsive websites and web applications.">
+    <meta name="theme-color" content="#0a0e14">
+
+    <meta property="og:title" content="Mathew Codes | Web Systems Developer">
+    <meta property="og:description" content="I build responsive websites and web applications that bring ideas to life.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/preview.jpg">
+
+    <title>Mathew Codes | Developer Portfolio</title>
+
+  <link rel="icon" type="image/png" sizes="any" href="images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<a href="#home" class="skip-link">Skip to content</a>
+
+<!-- Ambient cursor glow (desktop only) -->
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header id="site-header">
+    <nav>
+        <a href="#home" class="logo" aria-label="Mathew Codes — home">
+            <img src="images/logo.png" alt="Mathew Codes">
+        </a>
+
+        <button class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="theme-toggle"
+        id="theme-toggle"
+        aria-label="Switch to light mode"
+        aria-pressed="false">
+            <span class="theme-icon theme-icon-sun" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                </svg>
+            </span>
+            <span class="theme-icon theme-icon-moon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+                </svg>
+            </span>
+        </button>
+
+        <a href="#contact" class="nav-button">Let's Talk</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- ==================== HERO ==================== -->
+    <section id="home" class="hero">
+
+        <div class="hero-content reveal">
+            <p class="hero-intro">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="typed" data-text="Hello, I'm"></span><span class="caret">_</span>
+            </p>
+
+            <h1>Mathew <span>CodesIt</span></h1>
+
+            <h2>Web Systems Developer</h2>
+
+            <p class="hero-description">
+                I build responsive websites and web applications
+                that help people and businesses bring their ideas to life.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="primary-button">Explore My Work</a>
+                <a href="#contact" class="secondary-button">Contact Me</a>
+            </div>
+
+            <!-- Live GitHub activity widget -->
+            <div class="now-badge" aria-live="polite">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                <span class="now-label" id="now-label">Last pushed to</span>
+                <a class="now-item"
+                  id="now-item"
+                  href="https://github.com/mathew-mats"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    GitHub
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image reveal">
+            <img src="images/mathew.jpg" alt="Portrait of Mathew" decoding="async">
+        </div>
+
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="about section">
+        <div class="section-heading reveal">
+            <p class="section-label">Get to know me</p>
+            <h2>About <span>Me</span></h2>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text reveal">
+                <h3>Building ideas into digital experiences.</h3>
+
+                <p>
+                    I'm Mathew, a Web Systems Developer and Computer Science
+                    student interested in building modern websites and
+                    practical web applications.
+                </p>
+
+                <p>
+                    I enjoy learning how technology works, solving problems,
+                    and turning ideas into useful digital solutions.
+                    I'm continuously developing my skills in frontend
+                    development, backend systems, and databases.
+                </p>
+
+                <a href="#contact" class="primary-button">Let's Connect</a>
+            </div>
+
+            <div class="about-details reveal">
+                <div class="detail-card">
+                    <h4>Focus</h4>
+                    <p>Web Development</p>
+                </div>
+                <div class="detail-card">
+                    <h4>Learning</h4>
+                    <p>Frontend, Backend & Databases</p>
+                </div>
+                <div class="detail-card">
+                    <h4>Approach</h4>
+                    <p>Learn, Build, Improve</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section id="skills" class="skills section">
+        <div class="section-heading reveal">
+            <p class="section-label">What I work with</p>
+            <h2>My <span>Skills</span></h2>
+            <p class="section-subtitle">
+                Technologies and tools I'm learning and using to build digital solutions.
+            </p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <div class="skill-icon">&lt;/&gt;</div>
+                <h3>Frontend Development</h3>
+                <p>Building responsive and interactive user interfaces.</p>
+                <div class="skill-tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span>
+                </div>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">{ }</div>
+                <h3>Backend Development</h3>
+                <p>Learning server-side programming and application logic.</p>
+                <div class="skill-tags">
+                    <span>PHP</span><span>Python</span><span>Django</span><span>ASP.NET</span>
+                </div>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">▤</div>
+                <h3>Databases</h3>
+                <p>Working with data storage and database management.</p>
+                <div class="skill-tags">
+                    <span>MySQL</span><span>PostgreSQL</span><span>SQL</span>
+                </div>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">⚙</div>
+                <h3>Tools & Platforms</h3>
+                <p>Tools I use for development, testing, and version control.</p>
+                <div class="skill-tags">
+                    <span>Git</span><span>GitHub</span><span>VS Code</span><span>Linux</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS (merged + filters) ==================== -->
+    <section id="projects" class="projects section">
+        <div class="section-heading reveal">
+            <p class="section-label">Selected work</p>
+            <h2>Projects I've <span>Built</span></h2>
+            <p class="section-subtitle">
+                Websites and web applications created for businesses, creatives, and myself.
+            </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="filter-tabs reveal" role="tablist" aria-label="Filter projects">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter-btn" data-filter="website" role="tab" aria-selected="false">Websites</button>
+            <button class="filter-btn" data-filter="app" role="tab" aria-selected="false">Web Apps</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+
+            <!-- Hikmah Cakes -->
+            <article class="project-card reveal" data-category="website">
+                <div class="project-image">
+                    <img src="images/projects/hikmah-cakes.jpg"
+                        alt="Hikmah Cakes bakery website homepage"
+                        loading="lazy"
+                        decoding="async"
+                        width="1200"
+                        height="800">
+                </div>
+                <div class="project-info">
+                    <p class="project-type">Business Website</p>
+                    <h3>Hikmah Cakes</h3>
+                    <p>A bakery website presenting cake offerings, business information, and contact details.</p>
+                    <div class="skill-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://mathew-mats.github.io/Hikmahcakes-website/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Website <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- GATA -->
+            <article class="project-card reveal" data-category="website">
+                <div class="project-image">
+                    <img src="images/projects/gata-engineering.jpg"
+                        alt="GATA Engineering Services Ltd company website homepage"
+                        loading="lazy"
+                        decoding="async"
+                        width="1200"
+                        height="800">
+                </div>
+                <div class="project-info">
+                    <p class="project-type">Company Website</p>
+                    <h3>GATA Engineering Services Ltd</h3>
+                    <p>A company website introducing engineering and technology services, including computer repair, CCTV, and networking.</p>
+                    <div class="skill-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://mathew-mats.github.io/GATAEngineeringServicesLtd-website/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Website <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- DJ MAXMOND -->
+            <article class="project-card reveal" data-category="website">
+                <div class="project-image">
+                    <img src="images/projects/dj-maxmond.jpg"
+                        alt="DJ MAXMOND entertainment website homepage"
+                        loading="lazy"
+                        decoding="async"
+                        width="1200"
+                        height="800">
+                </div>
+                <div class="project-info">
+                    <p class="project-type">Entertainment Website</p>
+                    <h3>DJ MAXMOND</h3>
+                    <p>A DJ-themed website with a dark visual style for presenting music and entertainment content.</p>
+                    <div class="skill-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://mathew-mats.github.io/maxmond-website/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Website <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Coffee shop -->
+            <article class="project-card reveal" data-category="website">
+                <div class="project-image">
+                    <img src="images/projects/coffee-shop.jpg"
+                        alt="coffee shop website homepage"
+                        loading="lazy"
+                        decoding="async"
+                        width="1200"
+                        height="800">
+                </div>
+                <div class="project-info">
+                    <p class="project-type">Coffee shop Website</p>
+                    <h3>COFFE HOUSE</h3>
+                    <p>Clean, inviting coffee shop website — also available for purchase.</p>
+                    <div class="skill-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://mathew-mats.github.io/CoffeeShop---website/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Website <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- onead wwebsite -->
+            <article class="project-card reveal" data-category="website">
+                <div class="project-image">
+                    <img src="images/projects/onead-website.jpg"
+                        alt="onead marketing website homepage"
+                        loading="lazy"
+                        decoding="async"
+                        width="1200"
+                        height="800">
+                </div>
+                <div class="project-info">
+                    <p class="project-type">Marketing Website</p>
+                    <h3>ONEAD MARKETING</h3>
+                    <p>Marketing agency website optimized for lead generation and brand presence.</p>
+                    <div class="skill-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://mathew-mats.github.io/onead-website/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Website <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- zuena cakes -->
+            <article class="project-card reveal" data-category="website">
+                <div class="project-image">
+                    <img src="images/projects/zuena-cakes.jpg"
+                        alt="Zuena Cakes website homepage"
+                        loading="lazy"
+                        decoding="async"
+                        width="1200"
+                        height="800">
+                </div>
+                <div class="project-info">
+                    <p class="project-type">Cake Website</p>
+                    <h3>ZUENA CAKES AND DECOR</h3>
+                    <p>A vibrant online store for custom cakes and pastries, Professional cakes & decorations for weddings, birthdays, kwanjula, baby showers, and all special occasions in Kampala.</p>
+                    <div class="skill-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://mathew-mats.github.io/zuena-cakes-website/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Website <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article> 
+
+            <!-- Digital rights hub -->
+            <article class="project-card reveal" data-category="app">
+                <div class="project-image">
+                    <img src="images/projects/digital-rights.jpg"
+                        alt="Digital Rights Hub platform interface"
+                        loading="lazy"
+                        decoding="async"
+                        width="1200"
+                        height="800">
+                </div>
+                <div class="project-info">
+                    <p class="project-type">  Digital Rights Hub/p>
+                    <h3>Digital Rights Hub</h3>
+                    <p>A Site created to help the youth understand about Cybersecurity, AI Policy, and their digital rights.p>
+                    <div class="skill-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python Django Framework</span>
+                    </div>
+                    <a href="https://mathewcodesit.pythonanywhere.com/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Website <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Hanz Logic -->
+            <article class="project-card reveal" data-category="app">
+                <div class="project-image">
+                    <img src="images/projects/hanz-logic.jpg"
+                        alt="Hanz Logic music platform interface"
+                        loading="lazy"
+                        decoding="async"
+                        width="1200"
+                        height="800">
+                </div>
+                <div class="project-info">
+                    <p class="project-type">Music Platform · In Development</p>
+                    <h3>Hanz Logic Music Platform</h3>
+                    <p>A music platform concept for presenting beats, previewing audio, and exploring a shopping experience for music producers and customers.</p>
+                    <div class="skill-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>WaveSurfer.js</span>
+                    </div>
+                    <span class="project-status">In Development</span>
+                </div>
+            </article>
+
+            <!-- E-learning web app for supercom academy -->
+            <article class="project-card reveal" data-category="app">
+                <div class="project-image">
+                    <img src="images/projects/supercom-academy.jpg"
+                        alt="Supercom e-learning platform interface"
+                        loading="lazy"
+                        decoding="async"
+                        width="1200"
+                        height="800">
+                </div>
+                <div class="project-info">
+                    <p class="project-type">Supercom e-learning platform</p>
+                    <h3>Supercom Academy</h3>
+                    <p>An interactive e-learning platform for Supercom Academy, providing courses and resources for students and instructors.</p>
+                    <div class="skill-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
+                    </div>
+                    <span class="project-status">In Development</span>
+                    <a href="https://mathewcodesit.kesug.com/"
+                       class="project-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Website <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="contact section">
+        <div class="section-heading reveal">
+            <p class="section-label">Let's work together</p>
+            <h2>Get In <span>Touch</span></h2>
+            <p class="section-subtitle">
+                Have a project idea, collaboration, or just want to say hi?
+                I usually reply within 24 hours.
+            </p>
+        </div>
+
+        <div class="contact-layout">
+
+            <!-- LEFT: Contact methods -->
+            <div class="contact-methods reveal">
+
+                <a href="mailto:lukengemathias4@gmail.com" class="contact-row">
+                    <span class="contact-row-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="3" y="5" width="18" height="14" rx="2"/>
+                            <path d="m3 7 9 6 9-6"/>
+                        </svg>
+                    </span>
+                    <span class="contact-row-text">
+                        <span class="contact-row-label">Email</span>
+                        <span class="contact-row-value">lukengemathias4@gmail.com</span>
+                    </span>
+                    <span class="contact-row-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a href="https://wa.me/256757315386"
+                  class="contact-row"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    <span class="contact-row-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.79 14.14c-.24.68-1.41 1.3-1.94 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.66-.61-2.92-1.26-4.82-4.2-4.97-4.4-.15-.2-1.19-1.58-1.19-3.02 0-1.43.75-2.14 1.02-2.43.27-.29.58-.36.78-.36.19 0 .39.001.56.01.18.01.42-.07.66.5.24.58.83 2.02.9 2.16.07.15.12.32.02.51-.1.2-.15.32-.29.49-.15.17-.31.38-.44.5-.15.15-.3.31-.13.61.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.19-.29.39-.24.66-.15.27.1 1.71.81 2 .96.29.15.49.22.56.34.07.13.07.73-.17 1.41Z"/>
+                        </svg>
+                    </span>
+                    <span class="contact-row-text">
+                        <span class="contact-row-label">WhatsApp</span>
+                        <span class="contact-row-value">Chat directly</span>
+                    </span>
+                    <span class="contact-row-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <div class="contact-row contact-row-static">
+                    <span class="contact-row-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </span>
+                    <span class="contact-row-text">
+                        <span class="contact-row-label">Based in</span>
+                        <span class="contact-row-value">Kampala, Uganda · UTC+3</span>
+                    </span>
+                </div>
+
+                <!-- Socials row -->
+                <div class="contact-socials">
+                    <p class="contact-socials-label">Find me online</p>
+                    <div class="social-row">
+                        <a href="https://github.com/mathew-mats"
+                          class="social-btn"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.04 11.04 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/lukenge-mathias-9ba895414/"
+                          class="social-btn"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://twitter.com/mathewcodesit"
+                          class="social-btn"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://instagram.com/mathewcodesit"
+                          class="social-btn"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: Quick form -->
+            <form class="contact-form reveal"
+                id="contact-form"
+                action="https://formspree.io/f/xkjgkqgg"
+                method="POST"
+                novalidate>
+
+                <h3 class="contact-form-title">Send a quick message</h3>
+
+                <!-- Success + error message containers -->
+                <div data-fs-success></div>
+                <div data-fs-error></div>
+
+                <div class="field">
+                    <label for="cf-name">Your name</label>
+                    <input type="text" id="cf-name" name="name" required autocomplete="name"
+                        placeholder="Mathew Codes" data-fs-field>..
+                    <span data-fs-error="name"></span>
+                </div>
+
+                <div class="field">
+                    <label for="cf-email">Your email</label>
+                    <input type="email" id="cf-email" name="email" required autocomplete="email"
+                        placeholder="mathew@example.com" data-fs-field>
+                    <span data-fs-error="email"></span>
+                </div>
+
+                <div class="field">
+                    <label for="cf-message">Message</label>
+                    <textarea id="cf-message" name="message" rows="4" required
+                            placeholder="Tell me about your project..." data-fs-field></textarea>
+                    <span data-fs-error="message"></span>
+                </div>
+
+                <button type="submit" class="primary-button contact-submit" data-fs-submit-btn>
+                    Send Message
+                </button>
+
+                <p class="contact-form-note">
+                    Prefer email? Reach me at
+                    <a href="mailto:lukengemathias4@gmail.com">lukengemathias4@gmail.com</a>
+                </p>
+            </form>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="#home" class="logo" aria-label="Mathew Codes — home">
+                    <img src="images/logo.png" alt="Mathew Codes">
+                </a>
+                <p class="footer-tagline">
+                    Building ideas into digital experiences.
+                </p>
+
+                <div class="social-row footer-socials">
+                    <a href="https://github.com/mathew-mats"
+                       class="social-btn"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.04 11.04 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lukenge-mathias-9ba895414/"
+                       class="social-btn"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/mathewcodesit"
+                       class="social-btn"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="X (Twitter)">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/mathewcodesit"
+                       class="social-btn"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Work</h4>
+                    <a href="https://mathew-mats.github.io/Hikmahcakes-website/" target="_blank" rel="noopener noreferrer">Hikmah Cakes</a>
+                    <a href="https://mathew-mats.github.io/GATAEngineeringServicesLtd-website/" target="_blank" rel="noopener noreferrer">GATA Engineering</a>
+                    <a href="https://mathew-mats.github.io/maxmond-website/" target="_blank" rel="noopener noreferrer">DJ MAXMOND</a>
+                    <a href="#projects">All projects →</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:lukengemathias4@gmail.com">Email me</a>
+                    <a href="https://wa.me/2567315386" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    <a href="#contact">Contact form</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">
+                &copy; <span id="year">2026</span> Mathew Codes. All rights reserved.
+            </p>
+            <p class="footer-meta">
+                
+                <a href="#home" class="back-to-top-link">Back to top ↑</a>
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top">
+    <span aria-hidden="true">↑</span>
+</button>
+
+<script src="js/script.js"></script>
+
+<script>
+    window.formspree = window.formspree || function () {
+        (formspree.q = formspree.q || []).push(arguments);
+    };
+    formspree('initForm', {
+        formElement: '#contact-form',
+        formId: 'xkjgkqgg'  // ← your Form ID
+    });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>
